@@ -1,0 +1,32 @@
+# -*-compilation-*-
+Changing working directory to: `C:/musik/keine Macht den Toten'
+»C:/musik/keine Macht den Toten/keine Macht den Toten.ly« wird verarbeitet
+Analysieren...
+C:/musik/keine Macht den Toten/keine Macht den Toten.ly:114:11: Fehler: keine gültige Dauer: 7
+	e e
+           7
+C:/musik/keine Macht den Toten/keine Macht den Toten.ly:119:11: Fehler: keine gültige Dauer: 7
+	e e
+           7
+C:/musik/keine Macht den Toten/keine Macht den Toten.ly:121:9: Fehler: keine gültige Dauer: 7
+	e
+         7 e7
+C:/musik/keine Macht den Toten/keine Macht den Toten.ly:121:12: Fehler: keine gültige Dauer: 7
+	e7 e
+            7
+C:/musik/keine Macht den Toten/keine Macht den Toten.ly:122:9: Fehler: keine gültige Dauer: 7
+	e
+         7 e7
+C:/musik/keine Macht den Toten/keine Macht den Toten.ly:122:12: Fehler: keine gültige Dauer: 7
+	e7 e
+            7
+Interpretation der Musik...[8][16][24][32]
+Vorverarbeitung der grafischen Elemente...
+Interpretation der Musik...
+MIDI-Ausgabe nach »keine Macht den Toten.midi«...
+Finding the ideal number of pages...
+Fitting music on 1 page...
+Drawing systems...
+Layout nach »keine Macht den Toten.ps« ausgeben...
+Konvertierung nach »keine Macht den Toten.pdf«...
+Fehler: gescheiterte Dateien: "C:\\musik\\keine Macht den Toten\\keine Macht den Toten.ly"
