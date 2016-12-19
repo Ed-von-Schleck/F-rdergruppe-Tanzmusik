@@ -22,13 +22,15 @@ harmonies = \chordmode {
  f1 g1:7 c1 a1:m
  f1 g1 c1 a1:7 
  
- d1:m g1 a1:m f1
+ d1:m g1 c1 a1:m
  d1:m g1 c1 c1
  d1:m g1 c1 a1:m
  d1:m g1 bes1 bes1
  a1:7 a1:7
  
  es1 es1 c1:7 c1:7
+ es1 es1 c1:7 c1:7
+ f1:m f1:m e1 e1
  f1:m f1:m f1 f1
  
  
@@ -45,7 +47,15 @@ violinMusic = \relative c'' {
  b2. b8 c8~
  c4 g8. g16(c8 d8~d8) e8~
  e2. r4
- 
+ R1*18
+ a4.( g8~g4) es4
+ d2 g2
+ a2.( g8) bes8~
+ bes1
+ a4.( g8~g4) es4
+ d2 g2
+ a2.( g8) bes8~
+ bes1
 }
 
 trumpetoneMusic = \relative c'' {
@@ -61,6 +71,33 @@ trumpetoneMusic = \relative c'' {
  r8 a8~a8 c8 bes4 a4
  R1*3
  r8 bes8 des8 f8 ges8 f8 es8 f8
+ R1*9
+ r8 g,8 b8 d8 f8. e16~e8 d8
+ R1
+ r8 c8~c8 d8~d4 c8 r8  
+ R1*2
+ 
+ r4 c,4 e4 g4
+ e'4 e4 d8 c8~c4
+ R1
+ r8 g8 b8 d8 f8. e16~e8 d8
+ R1
+ r8 c8~c8 d8~d4 c8 r8  
+ R1*3
+ d2 r2
+ r1
+ g,2 r2
+ R1*8
+ as'1
+ g2 f2
+ as2. e4
+ es4. des8~des4 c4
+ as'1
+ g2 f2
+ f2. f4
+ ges4. f8~f4 a4
+ \bar ":|."
+
 }
 
 trumpettwoMusic = \relative c'' {
@@ -76,6 +113,22 @@ trumpettwoMusic = \relative c'' {
  r8 f8~f8 f8 ges4 f4
  R1*3
  r8 bes8 bes8 bes8 des8 c8 c8 des8
+ R1*9
+ r8 g,8 b8 d8 c8. c16~c8 b8
+ R1
+ r8 a8~a8 e8~e4 a8 r8  
+ R1*2
+ r4 c,4 e4 g4
+ g4 g4 a8 g8~g4
+ R1
+ r8 g8 b8 d8 c8. c16~c8 b8
+ R1
+ r8 a8~a8 e8~e4 a8 r8  
+ R1*3
+ bes2 r2
+ r1
+ e,2 r2
+ 
 }
 
 leadMusic = \relative c''
@@ -167,7 +220,22 @@ leadWordsFour = \lyricmode {
 
 
 backingOneMusic = \relative c'' {
-
+R1*24
+c4 c8. c16 b8 f8~f8 g8~
+g2 r2
+c8 b8~b8 c8~c8 g8~g8 e8~
+e2 r2
+c'4 c8. c16 b8 f8~f8 g8~
+g1
+c2 r2
+R1
+c4 c8. c16 b8 f8~f8 g8~
+g2 r2
+c8 b8~b8 c8~c8 g8~g8 e8~
+e2 r2
+c'4 c8. c16 b8 f8~f8 g8~
+g1
+bes1
 }
 
 backingOneWords = \lyricmode {
@@ -175,8 +243,22 @@ backingOneWords = \lyricmode {
 }
 
 backingTwoMusic = \relative c'' {
-s8
-
+R1*24
+a4 a8. a16 f8 f8~f8 d8~
+d2 r2
+g8 e8~e8 f8~f8 d8~d8 c8~
+c2 r2
+a'4 a8. a16 f8 f8~f8 d8~
+d1
+g2 r2
+R1
+a4 a8. a16 f8 f8~f8 d8~
+d2 r2
+g8 e8~e8 f8~f8 d8~d8 c8~
+c2 r2
+a'4 a8. a16 f8 f8~f8 d8~
+d1
+f1
 }
 backingTwoWords = \lyricmode {
 
@@ -246,5 +328,5 @@ backingTwoWords = \lyricmode {
 #(set-global-staff-size 19)
 
 \paper {
-  page-count = #1
+  page-count = #2
 }
