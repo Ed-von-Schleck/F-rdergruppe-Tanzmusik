@@ -7,7 +7,7 @@
 }
 
 global = {
-  \key c \major
+  \key bes \minor
   \time 4/4
   \tempo 4 = 170
 }
@@ -22,15 +22,13 @@ harmonies = \chordmode {
  f1 g1:7 c1 a1:m
  f1 g1 c1 a1:7 
  
- d1:m g1 c1 a1:m
+ d1:m g1 a1:m f1
  d1:m g1 c1 c1
  d1:m g1 c1 a1:m
  d1:m g1 bes1 bes1
  a1:7 a1:7
  
  es1 es1 c1:7 c1:7
- es1 es1 c1:7 c1:7
- f1:m f1:m e1 e1
  f1:m f1:m f1 f1
  
  
@@ -38,6 +36,10 @@ harmonies = \chordmode {
 }
 
 violinMusic = \relative c'' {
+ \key c \major
+ \time 4/4
+  \tempo 4 = 170
+
  R1*16
  a2. c4
  b2. d4
@@ -47,15 +49,7 @@ violinMusic = \relative c'' {
  b2. b8 c8~
  c4 g8. g16(c8 d8~d8) e8~
  e2. r4
- R1*18
- a4.( g8~g4) es4
- d2 g2
- a2.( g8) bes8~
- bes1
- a4.( g8~g4) es4
- d2 g2
- a2.( g8) bes8~
- bes1
+ 
 }
 
 trumpetoneMusic = \relative c'' {
@@ -71,33 +65,6 @@ trumpetoneMusic = \relative c'' {
  r8 a8~a8 c8 bes4 a4
  R1*3
  r8 bes8 des8 f8 ges8 f8 es8 f8
- R1*9
- r8 g,8 b8 d8 f8. e16~e8 d8
- R1
- r8 c8~c8 d8~d4 c8 r8  
- R1*2
- 
- r4 c,4 e4 g4
- e'4 e4 d8 c8~c4
- R1
- r8 g8 b8 d8 f8. e16~e8 d8
- R1
- r8 c8~c8 d8~d4 c8 r8  
- R1*3
- d2 r2
- r1
- g,2 r2
- R1*8
- as'1
- g2 f2
- as2. e4
- es4. des8~des4 c4
- as'1
- g2 f2
- f2. f4
- ges4. f8~f4 a4
- \bar ":|."
-
 }
 
 trumpettwoMusic = \relative c'' {
@@ -113,25 +80,9 @@ trumpettwoMusic = \relative c'' {
  r8 f8~f8 f8 ges4 f4
  R1*3
  r8 bes8 bes8 bes8 des8 c8 c8 des8
- R1*9
- r8 g,8 b8 d8 c8. c16~c8 b8
- R1
- r8 a8~a8 e8~e4 a8 r8  
- R1*2
- r4 c,4 e4 g4
- g4 g4 a8 g8~g4
- R1
- r8 g8 b8 d8 c8. c16~c8 b8
- R1
- r8 a8~a8 e8~e4 a8 r8  
- R1*3
- bes2 r2
- r1
- e,2 r2
- 
 }
 
-leadMusic = \relative c''
+leadMusicverse = \relative c''
 {
 f4. ges8~ges4 f4 
 f2 r2
@@ -149,6 +100,12 @@ des4. es8~es4 ges4
 f4. des8~des4 bes4 
 des2 c2 
 bes2 r2
+}
+
+leadMusicprechorus = \relative c''
+{
+\break
+\key c \major
 
 c8 c8~c8 d8~d4 e4 
 f4 f8 f8~f8 e8 d4 
@@ -159,7 +116,11 @@ d8 d8~d4 e4 f8 e8~
 e2 r2
 r1
 
+}
 
+leadMusicchorus = \relative c''
+{
+\break
 f4 e8. e16 d8 c8~c8 b8~
 b2 r2
 e8 d8~d8 c8~c8 b8~b8 a8~
@@ -180,26 +141,18 @@ cis1~
 cis2 r2
 }
 
-leadWords = \lyricmode { 
+leadWordsOne = \lyricmode { 
 \set stanza = "1." 
-\skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-\skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-\skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-\skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 
-\skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-\skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
-\skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1 \skip 1
+}
 
-
+leadWordsChorus = \lyricmode {
 \set stanza = "chorus"
 Jetzt sind wir wie -- der da 
 schö -- ner als zu vor
  
-
-
-
-
 }
+
+
 leadWordsTwo = \lyricmode { 
 \set stanza = "2." 
 
@@ -220,22 +173,7 @@ leadWordsFour = \lyricmode {
 
 
 backingOneMusic = \relative c'' {
-R1*24
-c4 c8. c16 b8 f8~f8 g8~
-g2 r2
-c8 b8~b8 c8~c8 g8~g8 e8~
-e2 r2
-c'4 c8. c16 b8 f8~f8 g8~
-g1
-c2 r2
-R1
-c4 c8. c16 b8 f8~f8 g8~
-g2 r2
-c8 b8~b8 c8~c8 g8~g8 e8~
-e2 r2
-c'4 c8. c16 b8 f8~f8 g8~
-g1
-bes1
+
 }
 
 backingOneWords = \lyricmode {
@@ -243,22 +181,8 @@ backingOneWords = \lyricmode {
 }
 
 backingTwoMusic = \relative c'' {
-R1*24
-a4 a8. a16 f8 f8~f8 d8~
-d2 r2
-g8 e8~e8 f8~f8 d8~d8 c8~
-c2 r2
-a'4 a8. a16 f8 f8~f8 d8~
-d1
-g2 r2
-R1
-a4 a8. a16 f8 f8~f8 d8~
-d2 r2
-g8 e8~e8 f8~f8 d8~d8 c8~
-c2 r2
-a'4 a8. a16 f8 f8~f8 d8~
-d1
-f1
+s8
+
 }
 backingTwoWords = \lyricmode {
 
@@ -275,27 +199,37 @@ backingTwoWords = \lyricmode {
     
       \new Staff = "Violin" {
         \set Staff.instrumentName = #"Violin"
-        \transpose c c { \global \violinMusic }
+        \set Staff.shortInstrumentName = #"V."
+        \set Staff.midiInstrument = #"violin"
+         \transpose c c { \violinMusic }
       }
       \new Staff = "Trumpets" <<
         \set Staff.instrumentName = #"Trumpets"
-	\new Voice = "Trumpet1" { \voiceOne << \transpose c c { \global \trumpetoneMusic } >> }
+	\set Staff.shortInstrumentName = #"T."
+        \set Staff.midiInstrument = #"trumpet"
+        \new Voice = "Trumpet1" { \voiceOne << \transpose c c { \global \trumpetoneMusic } >> }
 	\new Voice = "Trumpet2" { \voiceTwo << \transpose c c { \global \trumpettwoMusic } >> }      
       >>
     >>  
     \new StaffGroup <<
-      \new Staff = "lead" <<
+      \new Staff = "lead" {
 	\set Staff.instrumentName = #"Lead"
-	\new Voice = "lead" { << \transpose c c { \global \leadMusic } >> }
-      >>
+	\set Staff.shortInstrumentName = #"L."
+        \set Staff.midiInstrument = #"voice oohs"
+        \new Voice = "leadverse" { << \transpose c c { \global \leadMusicverse } >> }
+        \new Voice = "leadprechorus" { << \transpose c c { \leadMusicprechorus } >> }
+        \new Voice = "leadchorus" { << \transpose c c { \leadMusicchorus } >> }
+      }
       \new Lyrics \with { alignBelowContext = #"lead" }
-      \lyricsto "lead" \leadWordsFour
+      \lyricsto "leadchorus" \leadWordsChorus
       \new Lyrics \with { alignBelowContext = #"lead" }
-      \lyricsto "lead" \leadWordsThree
+      \lyricsto "leadverse" \leadWordsFour
       \new Lyrics \with { alignBelowContext = #"lead" }
-      \lyricsto "lead" \leadWordsTwo
+      \lyricsto "leadverse" \leadWordsThree
       \new Lyrics \with { alignBelowContext = #"lead" }
-      \lyricsto "lead" \leadWords
+      \lyricsto "leadverse" \leadWordsTwo
+      \new Lyrics \with { alignBelowContext = #"lead" }
+      \lyricsto "leadverse" \leadWordsOne
       % we could remove the line about this with the line below, since
       % we want the alto lyrics to be below the alto Voice anyway.
       % \new Lyrics \lyricsto "altos" \altoWords
@@ -328,5 +262,5 @@ backingTwoWords = \lyricmode {
 #(set-global-staff-size 19)
 
 \paper {
-  page-count = #2
+  page-count = #1
 }
