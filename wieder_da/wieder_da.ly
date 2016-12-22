@@ -38,7 +38,7 @@ f1:m f1:m f1 f1
 }
 
 violinMusic = \relative c'' {
- \key c \major
+ \key a \minor
  \time 4/4
   \tempo 4 = 170
 
@@ -81,11 +81,14 @@ trumpetoneVerseMusic = \relative c'' {
 
 trumpetonePreChorusMusic = \relative c'' {
  \break
+ \key c \major
+
  R1*8
 }
 
 trumpetoneChorusMusic = \relative c'' {
  \break
+ \key c \major
  R1
  r8 g8 b8 d8 f8. e16~e8 d8
  R1
@@ -134,6 +137,8 @@ trumpettwoVerseMusic = \relative c'' {
 }
 
 trumpettwoPreChrousMusic = \relative c'' {
+ \key c \major
+
  \break
  R1*9
 }
@@ -248,7 +253,9 @@ leadWordsFour = \lyricmode {
 
 
 backingOneChorusMusic = \relative c'' {
- R1*24
+ R1*24 
+ \break
+ \key c \major
  c4 c8. c16 b8 f8~f8 g8~
  g2 r2
  c8 b8~b8 c8~c8 g8~g8 e8~
@@ -271,7 +278,11 @@ backingOneChorusWords = \lyricmode {
 }
 
 backingTwoChorusMusic = \relative c'' {
+
+
  R1*24
+ \break
+ \key c \major
  a4 a8. a16 f8 f8~f8 d8~
  d2 r2
  g8 e8~e8 f8~f8 d8~d8 c8~
