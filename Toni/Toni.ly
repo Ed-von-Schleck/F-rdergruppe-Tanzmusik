@@ -310,7 +310,7 @@ backingOneChorusMusic = \relative c'' {
  R1*24 
  \break
  \key c \major
- d4 d4 b8 g8~g8 g8~
+ d4 d4 b8 b8~b8 g8~
  g2 r2
  c8 b8~b8 c8~c8 g8~g8 f8~
  f2 r2
@@ -318,7 +318,7 @@ backingOneChorusMusic = \relative c'' {
  g8 g8~g8 g8~g8 g8~g8 g8~
  g2 r2
  R1
- d'4 d4 b8 g8~g8 g8~
+ d'4 d4 b8 b8~b8 g8~
  g2 r2
  c8 b8~b8 c8~c8 g8~g8 f8~
  f2 r2
