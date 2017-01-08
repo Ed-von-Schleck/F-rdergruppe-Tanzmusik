@@ -1,8 +1,8 @@
 \version "2.16.2"
 
 \header {
-  title = "Wieder da"
-  composer = "skudella & speckdrum? for Fördergruppe Tanzmusik"
+  title = "Toni, der Langzeitstudent"
+  composer = "skudella & speckdrum for Fördergruppe Tanzmusik"
 
 }
 
@@ -33,7 +33,6 @@ es1 es1 c1:7 c1:7
 f1:m f1:m e1 e1
 f1:m f1:m f1 f1
  
- 
 
 }
 
@@ -52,15 +51,18 @@ violinMusic = \relative c'' {
  c4 g8. g16(c8 d8~d8) e8~
  e2. r4
  R1*18
- a4.( g8~g4) es4
- d2 g2
- a2.( g8) bes8~
- bes1
- a4.( g8~g4) es4
- d2 g2
- a2.( g8) bes8~
- bes1
  
+ \break
+ \key bes \major
+ 
+ a4.( g8~g4) es4
+ d2 g2
+ a2.( g8) bes8~
+ bes1
+ a4.( g8~g4) es4
+ d2 g2
+ a2.( g8) bes8~
+ bes1
 }
 
 trumpetoneVerseMusic = \relative c'' {
@@ -109,6 +111,7 @@ trumpetoneChorusMusic = \relative c'' {
 
 trumpetoneBridgeMusic = \relative c'' {
  \break
+ \key f \minor
  R1*8
  as'1
  g2 f2
@@ -118,7 +121,7 @@ trumpetoneBridgeMusic = \relative c'' {
  g2 f2
  f2. f4
  ges4. f8~f4 a4
- \bar ":|."
+ \bar "|."
 }
 
 trumpettwoVerseMusic = \relative c'' {
@@ -161,7 +164,6 @@ trumpettwoChorusMusic = \relative c'' {
  e,2 r2
  
 }
-
 leadMusicverse = \relative c''
 {
 f4. ges8~ges4 f4 
@@ -173,13 +175,13 @@ f4. des8~des4 bes4
 des4. bes8~bes4 des4 
 c2 r2
 f4. ges8~ges4 f4 
-f2 r2
+f2 r4 des
 f4. ges8~ges4 f4 
 c2 r2
 des4. es8~es4 ges4 
 f4. des8~des4 bes4 
 des2 c2 
-bes2 r2
+bes4 r2.
 }
 
 leadMusicprechorus = \relative c''
@@ -201,47 +203,101 @@ r1
 leadMusicchorus = \relative c''
 {
 \break
-f4 e8. e16 d8 c8~c8 b8~
-b2 r2
-e8 d8~d8 c8~c8 b8~b8 a8~
-a2 r2
-f'4 e8. e16 d8 c8~c8 b8~
-b4 b4 c8 d8~d8 e8~
+f4 e4 e8 d8~d8 b8~
+b2 r4 r8 a8
+e'8 d8~d8 c8~c8 b8~b8 a8~
+a2 r4 c
+f4 e4 d8 c8~c8 b8~
+b8 b8~b8 c8~c8 d8~d8 e8~
 e2 r2
 r1
-f4 e8. e16 d8 c8~c8 b8~
-b2 r2
-e8 d8~d8 c8~c8 b8~b8 a8~
+f4 e4 e8 d8~d8 b8~
+b2 r4 r8 a8
+e'8 d8~d8 c8~c8 b8~b8 a8~
 a2 r2
-f'4 e8. e16 d8 c8~c8 b8~
-b4 b4 c8 d8~d8 d8~
+f'4 e4 d8 c8~c8 b8~
+b8 b8~b8 b8~b8 c8~c8 d8~
 d1
-r2 d8 e8~e8 d8
-cis1~
-cis2 r2
+r4. d8 d e8~e8 d8
+cis1
+r1
+\bar ":|."
+
 }
 
 leadWordsOne = \lyricmode { 
-\set stanza = "1." 
+\set stanza = "1."
+
+Schla -- fen bis zwei
+lie -- ber bis drei
+das ist das Le -- ben das To -- ni so mag
+Mon -- tags ist frei
+und Diens -- tags ist frei
+Net -- flix und Chillen bis zum letz -- ten Tag
+
+}
+
+leadWordsPrechorus = \lyricmode { 
+\set stanza = "prechorus" 
+To -- ni stu -- diert ir -- gend -- was mit Kul -- tur und Kunst
+To -- ni kennt die U -- ni nur vom hörn
 }
 
 leadWordsChorus = \lyricmode {
 \set stanza = "chorus"
-Jetzt sind wir wie -- der da 
-schö -- ner als zu vor
- 
+To -- ni ist schon groß
+sein Le -- ben ist fa -- mos 
+am Mitt -- woch gibts ne Vor -- le -- sung um zwei
+
+Hin -- gehn tut er nicht
+es ist ja auch nicht Pflicht
+Stress hat er noch nie so ganz ka -- piert
+denn To -- ni stu -- diert
+}
+
+
+leadWordsChorusThree = \lyricmode {
+\set stanza = "last chorus"
+To -- ni braucht nen job
+Sonst droht ihm der Bank -- rott
+Die Tief -- kühl -- tru -- he ist auch schon fast leer
+Drei -- zehn Ja -- hre Chillen
+kein An -- trieb oh -- ne Willen
+Sinn -- los ist die gan -- ze The -- o -- rie
+der Phi -- lo -- so -- phie
+}
+
+leadWordsChorusThreeTwo = \lyricmode {
+\set stanza = "last chorus repeated"
+To -- ni braucht nen job
+Sonst droht ihm der Bank -- rott
+Die Tief -- kühl -- piz -- za ist schon längst ver -- braucht
+Jetzt schafft er am Band
+ab mor -- gens um halb acht
+Ar -- beit hat er nie so ganz ka -- piert
+denn To -- ni stu -- diert
 }
 
 
 leadWordsTwo = \lyricmode { 
 \set stanza = "2." 
-
-
+Dö -- ner um acht
+Piz -- za heut nacht
+das ist das Es -- sen das To -- ni so mag
+wär ja ne Pracht
+wenn Mut -- ti was macht
+dre -- cki -- ge Wä -- sche macht ihr doch Spaß
 }
 
 leadWordsThree = \lyricmode {
+  
 \set stanza = "3." 
-
+BA -- föG- -- Be -- scheid
+Nun ist's so -- weit
+das ist der Tag an dem To -- ni sich fragt
+was bringt die Zeit?
+und Frust macht sich breit
+Nun will der Staat wohl das Geld zu -- rück
 
 }
 
@@ -250,27 +306,26 @@ leadWordsFour = \lyricmode {
 
 
 }
-
-
 backingOneChorusMusic = \relative c'' {
  R1*24 
  \break
  \key c \major
- c4 c8. c16 b8 f8~f8 g8~
+ d4 d4 b8 g8~g8 g8~
  g2 r2
- c8 b8~b8 c8~c8 g8~g8 e8~
- e2 r2
- c'4 c8. c16 b8 f8~f8 g8~
- g1
- c2 r2
+ c8 b8~b8 c8~c8 g8~g8 f8~
+ f2 r2
+ d'4 d4 b8 g8~g8 g8~
+ g8 g8~g8 g8~g8 g8~g8 g8~
+ g2 r2
  R1
- c4 c8. c16 b8 f8~f8 g8~
+ d'4 d4 b8 g8~g8 g8~
  g2 r2
- c8 b8~b8 c8~c8 g8~g8 e8~
- e2 r2
- c'4 c8. c16 b8 f8~f8 g8~
- g1
+ c8 b8~b8 c8~c8 g8~g8 f8~
+ f2 r2
+ d'4 d4 b8 g8~g8 g8~
+ g8 g8~g8 g8~g8 g8~g8 bes8~
  bes1
+
 }
 
 backingOneChorusWords = \lyricmode {
@@ -283,22 +338,21 @@ backingTwoChorusMusic = \relative c'' {
  R1*24
  \break
  \key c \major
- a4 a8. a16 f8 f8~f8 d8~
+ a4 a4 f8 g8~g8 d8~
  d2 r2
- g8 e8~e8 f8~f8 d8~d8 c8~
+ a'8 e8~e8 f8~f8 d8~d8 c8~
  c2 r2
- a'4 a8. a16 f8 f8~f8 d8~
- d1
- g2 r2
+ a'4 a4 f8 g8~g8 d8~
+ d8 d8~d8 d8~d8 d8~d8 e8~
+ e2 r2
  R1
- a4 a8. a16 f8 f8~f8 d8~
+ a4 a4 f8 g8~g8 d8~
  d2 r2
- g8 e8~e8 f8~f8 d8~d8 c8~
+ a'8 e8~e8 f8~f8 d8~d8 c8~
  c2 r2
- a'4 a8. a16 f8 f8~f8 d8~
- d1
+ a'4 a4 f8 g8~g8 d8~
+ d8 d8~d8 d8~d8 d8~d8 f8~
  f1
-
 }
 backingTwoChorusWords = \lyricmode {
 
@@ -345,6 +399,10 @@ backingTwoChorusWords = \lyricmode {
         \new Voice = "leadchorus" { << \transpose c c { \leadMusicchorus } >> }
       }
       \new Lyrics \with { alignBelowContext = #"lead" }
+      \lyricsto "leadchorus" \leadWordsChorusThreeTwo
+      \new Lyrics \with { alignBelowContext = #"lead" }
+      \lyricsto "leadchorus" \leadWordsChorusThree
+      \new Lyrics \with { alignBelowContext = #"lead" }
       \lyricsto "leadchorus" \leadWordsChorus
       \new Lyrics \with { alignBelowContext = #"lead" }
       \lyricsto "leadverse" \leadWordsFour
@@ -354,8 +412,8 @@ backingTwoChorusWords = \lyricmode {
       \lyricsto "leadverse" \leadWordsTwo
       \new Lyrics \with { alignBelowContext = #"lead" }
       \lyricsto "leadverse" \leadWordsOne
-      
-     
+      \new Lyrics \with { alignBelowContext = #"lead" }
+      \lyricsto "leadprechorus" \leadWordsPrechorus
       % we could remove the line about this with the line below, since
       % we want the alto lyrics to be below the alto Voice anyway.
       % \new Lyrics \lyricsto "altos" \altoWords
@@ -390,5 +448,5 @@ backingTwoChorusWords = \lyricmode {
 #(set-global-staff-size 19)
 
 \paper {
-  page-count = #2
+  page-count = #3
 }
